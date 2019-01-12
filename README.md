@@ -1,5 +1,7 @@
 # Awesome Roadmap
 
+[![Build Status](https://api.travis-ci.org/liuchong/awesome-roadmap.svg?branch=master)](https://travis-ci.org/liuchong/awesome-roadmap)
+
 A curated list of roadmaps.
 
 ## Web

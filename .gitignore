@@ -1,0 +1,10 @@
+# awesome_bot
+ab-results*
+
+# temporary files
+tmp
+*~
+.*~
+.#*
+.DS_Store
+nohup.out
