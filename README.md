@@ -17,7 +17,7 @@ Contributions welcome. Add links through pull requests or create an issue to sta
 ## Web Development
 - [Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap) - Roadmap to becoming a Web Developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/kamranahmedse/developer-roadmap#-introduction)
 - [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap) - Roadmap to becoming a React developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/adam-golab/react-developer-roadmap)
-- [Vue Developer Roadmap](https://github.com/flaviocopes/vue-developer-roadmap) - Roadmap to becoming a Vue developer in 2018
+- [Vue Developer Roadmap](https://github.com/flaviocopes/vue-developer-roadmap) - Roadmap to becoming a Vue.js developer in 2018
 
 ## Mobile Development
 - [🚀 iOS Developer Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap) - Roadmap to becoming an iOS developer in 2018
