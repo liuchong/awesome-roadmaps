@@ -33,7 +33,7 @@ Contributions welcome. Add links through pull requests or create an issue to sta
 
 ## Game Development
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap) - Roadmap to becoming a game developer in 2018.
-- [game-programmer](https://github.com/miloyip/game-programmer) - A Study Path for Game Programmer.
+- [Game Programmer](https://github.com/miloyip/game-programmer) - A Study Path for Game Programmer.
 
 ## Design
 - [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017.
