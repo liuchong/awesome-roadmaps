@@ -6,8 +6,6 @@ Contributions welcome. Add links through pull requests or create an issue to sta
 
 ## Contents
 
-- [Awesome Roadmap ![Awesome](https://github.com/sindresorhus/awesome)](#awesome-roadmap-awesomehttpsgithubcomsindresorhusawesome)
-  - [Contents](#contents)
   - [Web Development](#web-development)
   - [Mobile Development](#mobile-development)
   - [Machine Learning](#machine-learning)
@@ -15,19 +13,18 @@ Contributions welcome. Add links through pull requests or create an issue to sta
   - [Game Development](#game-development)
   - [Design](#design)
   - [Miscellaneous](#miscellaneous)
-  - [License](#license)
 
 ## Web Development
 - [Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap) - Roadmap to becoming a Web Developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/kamranahmedse/developer-roadmap#-introduction)
 - [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap) - Roadmap to becoming a React developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/adam-golab/react-developer-roadmap)
 - [Vue Developer Roadmap](https://github.com/flaviocopes/vue-developer-roadmap) - Roadmap to becoming a Vue.js developer in 2018.
-- [ASP.Net Core Developer Roadmap](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap) - Roadmap to becoming an ASP .NET Core developer in 2019 
-[<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap)
+- [ASP.Net Core Developer Roadmap](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap) - Roadmap to becoming an ASP .NET Core developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap)
+
 ## Mobile Development
 - [🚀 iOS Developer Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap) - Roadmap to becoming an iOS developer in 2018.
 
 ## Machine Learning
-- [Deep Learning Papers Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) - Deep Learning papers reading roadmap for anyone who are eager to learn this amazing tech!
+- [Deep Learning Papers Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) - Deep Learning papers reading roadmap for anyone who are eager to learn this amazing tech.
 
 ## Data Science
 - [Data Scientist Roadmap](https://github.com/hasbrain/data-science-roadmap) - To give you an overview of the core skills needed in data science.
