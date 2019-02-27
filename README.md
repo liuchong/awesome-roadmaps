@@ -1,24 +1,25 @@
-# Awesome Roadmap [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/master/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Awesome Roadmap [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of roadmaps.
+A curated list of roadmaps, mostly about software development.
 
-Contributions welcome. Add links through pull requests or create an issue to start a discussion.
+Contributions welcome.
+Add links through pull requests or create an issue to start a discussion.
+Please read [contribution guidelines](contributing.md), thank you!
 
 ## Contents
 
-  - [Web Development](#web-development)
-  - [Mobile Development](#mobile-development)
-  - [Machine Learning](#machine-learning)
-  - [Data Science](#data-science)
-  - [Game Development](#game-development)
-  - [Design](#design)
-  - [Miscellaneous](#miscellaneous)
+- [Web Development](#web-development)
+- [Mobile Development](#mobile-development)
+- [Machine Learning](#machine-learning)
+- [Data Science](#data-science)
+- [Game Development](#game-development)
+- [Design](#design)
 
 ## Web Development
-- [Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap) - Roadmap to becoming a Web Developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/kamranahmedse/developer-roadmap#-introduction)
-- [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap) - Roadmap to becoming a React developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/adam-golab/react-developer-roadmap)
+- [Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap) - Roadmap to becoming a Web Developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/kamranahmedse/developer-roadmap#-introduction).
+- [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap) - Roadmap to becoming a React developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/adam-golab/react-developer-roadmap).
 - [Vue Developer Roadmap](https://github.com/flaviocopes/vue-developer-roadmap) - Roadmap to becoming a Vue.js developer in 2018.
-- [ASP.Net Core Developer Roadmap](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap) - Roadmap to becoming an ASP .NET Core developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap)
+- [ASP.Net Core Developer Roadmap](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap) - Roadmap to becoming an ASP .NET Core developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap).
 
 ## Mobile Development
 - [🚀 iOS Developer Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap) - Roadmap to becoming an iOS developer in 2018.
@@ -35,8 +36,6 @@ Contributions welcome. Add links through pull requests or create an issue to sta
 
 ## Design
 - [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017.
-
-## Miscellaneous
 
 ## License
 
