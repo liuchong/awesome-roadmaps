@@ -1,4 +1,4 @@
-# Awesome Roadmap [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Roadmaps [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A curated list of roadmaps, mostly about software development.
 
