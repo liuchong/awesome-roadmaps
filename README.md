@@ -18,6 +18,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 
 ## Programming Language
 - [Go Developer Roadmap](https://github.com/Alikhll/golang-developer-roadmap) - Roadmap to becoming a Go developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/Alikhll/golang-developer-roadmap).
+- [Rust Web Developer Roadmap](https://github.com/csharad/rust-web-developer-roadmap) - Roadmap to becoming a Rust Web developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/csharad/rust-web-developer-roadmap).
 
 ## Web Development
 - [Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap) - Roadmap to becoming a Web Developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/kamranahmedse/developer-roadmap#-introduction).
