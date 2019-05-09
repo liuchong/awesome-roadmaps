@@ -27,13 +27,13 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [ASP.Net Core Developer Roadmap](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap) - Roadmap to becoming an ASP .NET Core developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap).
 
 ## Mobile Development
-- [🚀 iOS Developer Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap) - Roadmap to becoming an iOS developer in 2018.
+- [iOS Developer Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap) - Roadmap to becoming an iOS developer in 2018.
 
 ## Machine Learning
 - [Deep Learning Papers Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) - Deep Learning papers reading roadmap for anyone who are eager to learn this amazing tech.
 
 ## Data Science
-- [Data Scientist Roadmap](https://github.com/hasbrain/data-science-roadmap) - To give you an overview of the core skills needed in data science.
+- [Data Scientist Roadmap](https://github.com/hasbrain/data-science-roadmap) - Gives you an overview of the core skills needed in data science.
 
 ## Game Development
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap) - Roadmap to becoming a game developer in 2018.
