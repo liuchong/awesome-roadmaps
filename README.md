@@ -1,4 +1,4 @@
-# Awesome Roadmaps [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Roadmaps [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Build Status](https://travis-ci.org/liuchong/awesome-roadmaps.svg?branch=master)](https://travis-ci.org/liuchong/awesome-roadmaps)
 
 A curated list of roadmaps, mostly about software development, which give you a clear route to improve your knowledge or skills.
 
