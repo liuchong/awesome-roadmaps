@@ -31,6 +31,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 ## Mobile Development
 - [iOS Developer Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap) - Roadmap to becoming an iOS developer in 2018.
 - [Android Developer Roadmap](https://github.com/anacoimbrag/android-developer-roadmap) - Help new developers to start building beautiful android applications [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/anacoimbrag/android-developer-roadmap).
+- [Flutter Developer Roadmap](https://github.com/olexale/flutter_roadmap) - Roadmap to create hybrid apps using Google's Flutter SDK
 
 ## Game Development
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap) - Roadmap to becoming a game developer in 2020 [<img src="https://img.shields.io/badge/Roadmap-2020-yellowgreen.svg">](https://github.com/utilForever/game-developer-roadmap).
