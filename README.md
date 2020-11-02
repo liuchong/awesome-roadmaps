@@ -12,7 +12,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Web Development](#web-development)
 - [Mobile Development](#mobile-development)
 - [Game Development](#game-development)
-- [AI / Machine Learning / Data Science](#ai---machine-Learning---data-science)
+- [AI / Machine Learning / Data Science](#ai--machine-learning--data-science)
 - [Miscellaneous](#miscellaneous)
 - [Articles](#articles)
 
