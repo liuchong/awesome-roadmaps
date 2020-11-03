@@ -12,6 +12,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Web Development](#web-development)
 - [Mobile Development](#mobile-development)
 - [Game Development](#game-development)
+- [AI / Machine Learning / Data Science](#ai--machine-learning--data-science)
 - [Miscellaneous](#miscellaneous)
 - [Articles](#articles)
 
@@ -37,13 +38,16 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap) - Roadmap to becoming a game developer in 2020 [<img src="https://img.shields.io/badge/Roadmap-2020-yellowgreen.svg">](https://github.com/utilForever/game-developer-roadmap).
 - [Game Programmer](https://github.com/miloyip/game-programmer) - A Study Path for Game Programmer.
 
-## Miscellaneous
-- [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017.
+## AI / Machine Learning / Data Science
+- [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap) - Roadmap to becoming an Artificial Intelligence Expert
+- [NLP Roadmap](https://github.com/graykode/nlp-roadmap) - ROADMAP and KEYWORD for students those who have interest in learning NLP [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/graykode/nlp-roadmap).
 - [Deep Learning Papers Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) - Deep Learning papers reading roadmap for anyone who are eager to learn this amazing tech.
 - [Deep Learning Roadmap](https://github.com/machinelearningmindset/deep-learning-roadmap) - All You Need to Know About Deep Learning - A kick-starter.
 - [Data Scientist Roadmap](https://github.com/hasbrain/data-science-roadmap) - Gives you an overview of the core skills needed in data science.
+
+## Miscellaneous
+- [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017.
 - [Hacker Roadmap](https://github.com/Sundowndev/hacker-roadmap) - A guide for amateurs pen testers and a collection of hacking tools, resources and references.
-- [NLP Roadmap](https://github.com/graykode/nlp-roadmap) - ROADMAP and KEYWORD for students those who have interest in learning NLP [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/graykode/nlp-roadmap).
 - [The Full-Stack Software Design and Architecture Roadmap](https://github.com/stemmlerjs/software-design-and-architecture-roadmap) - A software design and architecture roadmap for any developer.
 
 ## Articles
