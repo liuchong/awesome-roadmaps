@@ -45,7 +45,8 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Deep Learning Papers Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) - Deep Learning papers reading roadmap for anyone who are eager to learn this amazing tech.
 - [Deep Learning Roadmap](https://github.com/machinelearningmindset/deep-learning-roadmap) - All You Need to Know About Deep Learning - A kick-starter.
 - [Data Scientist Roadmap](https://github.com/hasbrain/data-science-roadmap) - Gives you an overview of the core skills needed in data science.
-- [Data scientist roadmap](https://github.com/MrMimic/data-scientist-roadmap) - Bunch of tutorials helping whoever wants to start learning stuff about data science.
+- [Data-scientist-roadmap](https://github.com/MrMimic/data-scientist-roadmap) - Bunch of tutorials helping whoever wants to start learning stuff about data science.
+- [Data Engineer Roadmap](https://github.com/datastacktv/data-engineer-roadmap) - Roadmap to becoming a data engineer in 2020 [<img src="https://img.shields.io/badge/Roadmap-2020-yellowgreen.svg">](https://github.com/datastacktv/data-engineer-roadmap).
 
 ## Miscellaneous
 - [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017.
