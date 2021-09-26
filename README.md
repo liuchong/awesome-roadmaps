@@ -49,10 +49,11 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Data Engineer Roadmap](https://github.com/datastacktv/data-engineer-roadmap) - Roadmap to becoming a data engineer in 2020 [<img src="https://img.shields.io/badge/Roadmap-2020-yellowgreen.svg">](https://github.com/datastacktv/data-engineer-roadmap).
 
 ## Miscellaneous
-- [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017.
 - [Hacker Roadmap](https://github.com/Sundowndev/hacker-roadmap) - A guide for amateurs pen testers and a collection of hacking tools, resources and references.
+- [System Design Master Plan](https://github.com/mohsenshafiei/system-design-master-plan) - Roadmap to learn system design and architecture [<img src="https://img.shields.io/badge/Roadmap-2021-yellowgreen.svg">](https://github.com/mohsenshafiei/system-design-master-plan).
 - [The Full-Stack Software Design and Architecture Roadmap](https://github.com/stemmlerjs/software-design-and-architecture-roadmap) - A software design and architecture roadmap for any developer.
 - [Software architect roadmap](https://github.com/AlaaAttya/software-architect-roadmap) - A broadway roadmap that you can follow to start being a software architect.
+- [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017.
 
 ## Articles
 - [A Roadmap To Become A Better Android Developer](https://medium.com/mindorks/a-roadmap-to-become-a-better-android-developer-3038cf7f8c8d) - A collection of articles to provide a proper roadmap to become a better Android Developer.
