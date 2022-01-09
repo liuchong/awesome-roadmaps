@@ -20,6 +20,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Go Developer Roadmap](https://github.com/Alikhll/golang-developer-roadmap) - Roadmap to becoming a Go developer in 2020 [<img src="https://img.shields.io/badge/Roadmap-2020-yellowgreen.svg">](https://github.com/Alikhll/golang-developer-roadmap).
 - [Java Developer Roadmap](https://github.com/s4kibs4mi/java-developer-roadmap) - Roadmap to becoming a Java developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/s4kibs4mi/java-developer-roadmap).
 - [Nodejs Developer Roadmap](https://github.com/aliyr/Nodejs-Developer-Roadmap) - Roadmap to becoming a Node.js developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/aliyr/Nodejs-Developer-Roadmap).
+- [PHP Developer roadmap](https://github.com/thecodeholic/php-developer-roadmap) - Following this path will guarantee to Become a PHP Developer in 2021 [<img src="https://img.shields.io/badge/Roadmap-2021-yellowgreen.svg">](https://github.com/thecodeholic/php-developer-roadmap) [<img src="https://img.shields.io/badge/YouTube-FF0000?logo=youtube">](https://github.com/thecodeholic/php-developer-roadmap).
 - [Rust Web Developer Roadmap](https://github.com/anshulrgoyal/rust-web-developer-roadmap) - Roadmap to becoming a Rust Web developer in 2020 [<img src="https://img.shields.io/badge/Roadmap-2020-yellowgreen.svg">](https://github.com/anshulrgoyal/rust-web-developer-roadmap).
 
 
