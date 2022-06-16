@@ -17,6 +17,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Articles](#articles)
 
 ## Programming Language
+- [C++ Developer Roadmap](https://github.com/salmer/CppDeveloperRoadmap) - Roadmap focuses on general competencies and skills about C++ in 2022 [<img src="https://img.shields.io/badge/Roadmap-2022-green.svg">](https://github.com/salmer/CppDeveloperRoadmap).
 - [Go Developer Roadmap](https://github.com/Alikhll/golang-developer-roadmap) - Roadmap to becoming a Go developer in 2021 [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/Alikhll/golang-developer-roadmap).
 - [Java Developer Roadmap](https://github.com/s4kibs4mi/java-developer-roadmap) - Roadmap to becoming a Java developer in 2021 [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/s4kibs4mi/java-developer-roadmap).
 - [Nodejs Developer Roadmap](https://github.com/aliyr/Nodejs-Developer-Roadmap) - Roadmap to becoming a Node.js developer in 2021 [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/aliyr/Nodejs-Developer-Roadmap).
@@ -53,6 +54,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [NLP Roadmap](https://github.com/graykode/nlp-roadmap) - Roadmap for Natural Language Processing learning in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/graykode/nlp-roadmap).
 
 ## Miscellaneous
+- [Awesome Quality Assurance Roadmap](https://github.com/fityanos/awesome-quality-assurance-roadmap) - Roadmap for QA and software testing learning curve which you might need to start the journey [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/fityanos/awesome-quality-assurance-roadmap).
 - [Hacker Roadmap](https://github.com/Sundowndev/hacker-roadmap) - Roadmap for amateur pen testers and a collection of hacking tools, resources and references.
 - [Software Architect Roadmap](https://github.com/AlaaAttya/software-architect-roadmap) - Roadmap for becoming a software architect.
 - [Software Design and Architecture Roadmap](https://github.com/stemmlerjs/software-design-and-architecture-roadmap) - A software design and architecture roadmap for any developer.
