@@ -56,6 +56,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 ## Miscellaneous
 - [Awesome Quality Assurance Roadmap](https://github.com/fityanos/awesome-quality-assurance-roadmap) - Roadmap for QA and software testing learning curve which you might need to start the journey [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/fityanos/awesome-quality-assurance-roadmap).
 - [Hacker Roadmap](https://github.com/Sundowndev/hacker-roadmap) - Roadmap for amateur pen testers and a collection of hacking tools, resources and references.
+- [SEO Roadmap](https://github.com/seoroadmap/seo-roadmap) - Roadmap to becoming an SEO expert in 2024  [<img src="https://img.shields.io/badge/Roadmap-2024-green.svg">](https://github.com/seoroadmap/seo-roadmap).
 - [Software Architect Roadmap](https://github.com/AlaaAttya/software-architect-roadmap) - Roadmap for becoming a software architect.
 - [Software Design and Architecture Roadmap](https://github.com/stemmlerjs/software-design-and-architecture-roadmap) - A software design and architecture roadmap for any developer.
 - [System Design Roadmap](https://github.com/mohsenshafiei/system-design-master-plan) - Roadmap to learn system design and architecture [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/mohsenshafiei/system-design-master-plan).
