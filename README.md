@@ -65,6 +65,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 ## Articles
 - [A Roadmap To Become A Better Android Developer](https://medium.com/mindorks/a-roadmap-to-become-a-better-android-developer-3038cf7f8c8d) - A collection of articles to provide a proper roadmap to become a better Android Developer.
 - [Java Full Stack Developer Roadmap](https://www.scaler.com/blog/java-full-stack-developer-roadmap/) - Discover all the tech career roadmaps and latest market trends in the tech job market!
+- [Data Analytics Roadmap](https://www.appliedaicourse.com/blog/data-analytics-roadmap/) - Unlock success with this comprehensive roadmap: your guide to mastering analytics skills and career growth!
 
 ## License
 
