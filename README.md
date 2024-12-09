@@ -54,7 +54,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [NLP Roadmap](https://github.com/graykode/nlp-roadmap) - Roadmap for Natural Language Processing learning in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/graykode/nlp-roadmap).
 
 ## Cyber Security
-- [Introduction to cyber security]([https://github.com/AMAI-GmbH/AI-Expert-Roadmap](https://www.darkrelay.com/participant-page/cybersecurity?programId=6b12055c-6bef-468b-a8e4-0bff2efa5297&participantId=6c87f8f7-a953-4fc0-92c2-da8c77f37fba)) - Roadmap to start out with cyber security.
+- [Introduction to cyber security](https://www.darkrelay.com/participant-page/cybersecurity?programId=6b12055c-6bef-468b-a8e4-0bff2efa5297&participantId=6c87f8f7-a953-4fc0-92c2-da8c77f37fba) - Roadmap to start out with cyber security.
 
 ## Miscellaneous
 - [Awesome Quality Assurance Roadmap](https://github.com/fityanos/awesome-quality-assurance-roadmap) - Roadmap for QA and software testing learning curve which you might need to start the journey [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/fityanos/awesome-quality-assurance-roadmap).
