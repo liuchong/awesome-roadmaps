@@ -24,7 +24,6 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [PHP Developer roadmap](https://github.com/thecodeholic/php-developer-roadmap) - Following this path will guarantee to Become a PHP Developer in 2021 [<img src="https://img.shields.io/badge/Roadmap-2021-green.svg">](https://github.com/thecodeholic/php-developer-roadmap) [<img src="https://img.shields.io/badge/YouTube-FF0000?logo=youtube">](https://github.com/thecodeholic/php-developer-roadmap).
 - [Rust Web Developer Roadmap](https://github.com/anshulrgoyal/rust-web-developer-roadmap) - Roadmap to becoming a Rust Web developer in 2022 [<img src="https://img.shields.io/badge/Roadmap-2022-green.svg">](https://github.com/anshulrgoyal/rust-web-developer-roadmap).
 
-
 ## Web Development
 - [Angular Developer Roadmap](https://github.com/sulco/angular-developer-roadmap) - Roadmap to becoming an Angular developer [<img src="https://img.shields.io/badge/Roadmap-2018-yellow.svg">](https://github.com/sulco/angular-developer-roadmap).
 - [Angular Developer Roadmap 2](https://github.com/saifaustcse/angular-developer-roadmap) - Roadmap to becoming an Angular developer in 2024 [<img src="https://img.shields.io/badge/Roadmap-2024-green.svg">](https://github.com/saifaustcse/angular-developer-roadmap).
@@ -34,6 +33,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [Laravel Developer Roadmap](https://github.com/Hasnayeen/laravel-developer-roadmap) - Roadmap to becoming an Laravel developer in 2024 [<img src="https://img.shields.io/badge/Roadmap-2024-green.svg">](https://github.com/Hasnayeen/laravel-developer-roadmap).
 - [React Developer Roadmap](https://github.com/adam-golab/react-developer-roadmap) - Roadmap to becoming a React developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/adam-golab/react-developer-roadmap).
 - [Vue Developer Roadmap](https://github.com/flaviocopes/vue-developer-roadmap) - Roadmap to becoming a Vue.js developer in 2019 [<img src="https://img.shields.io/badge/Roadmap-2019-yellowgreen.svg">](https://github.com/flaviocopes/vue-developer-roadmap).
+- [Frontend Developer Roadmap](https://github.com/Yousha/Frontend-Developer-Roadmap) - Roadmap to becoming a Frontend developer in 2025 [<img src="https://img.shields.io/badge/Roadmap-2025-green.svg">](https://github.com/Yousha/Frontend-Developer-Roadmap).
 
 ## Mobile Development
 - [Android Developer Roadmap](https://github.com/mobile-roadmap/android-developer-roadmap) - Roadmap to becoming an Android developer in 2020 [<img src="https://img.shields.io/badge/Roadmap-2020-yellowgreen.svg">](https://github.com/mobile-roadmap/android-developer-roadmap).
@@ -61,6 +61,7 @@ Please read [contribution guidelines](contributing.md), thank you!
 - [System Design Roadmap](https://github.com/mohsenshafiei/system-design-master-plan) - Roadmap to learn system design and architecture [<img src="https://img.shields.io/badge/Roadmap-2024-green.svg">](https://github.com/mohsenshafiei/system-design-master-plan).
 - [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - Roadmap on becoming a UI/UX designer in 2017 [<img src="https://img.shields.io/badge/Roadmap-2017-yellow.svg">](https://github.com/togiberlin/ui-ux-designer-roadmap).
 - [University Degree Roadmap](https://github.com/IlIllII/collecobrary) - Roadmap for taking online university courses in various degree subjects [<img src="https://img.shields.io/badge/Roadmap-2024-green.svg">](https://github.com/IlIllII/collecobrary).
+- [Digital forensic (DFIR) specialist roadmap](https://github.com/Yousha/DFIR-Specialist-Roadmap) - A roadmap to becoming a Digital Forensics and Incident Response (DFIR) specialist.  [<img src="https://img.shields.io/badge/Roadmap-2025-green.svg">](https://github.com/Yousha/DFIR-Specialist-Roadmap).
 
 ## Articles
 - [A Roadmap To Become A Better Android Developer](https://medium.com/mindorks/a-roadmap-to-become-a-better-android-developer-3038cf7f8c8d) - A collection of articles to provide a proper roadmap to become a better Android Developer <img src="https://img.shields.io/badge/Medium-000000?logo=medium">.
