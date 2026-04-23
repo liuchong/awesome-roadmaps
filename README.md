@@ -91,4 +91,4 @@ Type badges indicate the current resource type or status.
 
 ## License
 
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![License: 0PL](https://img.shields.io/badge/License-0PL-blue.svg)](https://license.pub/0pl/)
