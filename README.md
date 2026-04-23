@@ -14,8 +14,10 @@ Type badges indicate the current resource type or status.
 - [Programming Language](#programming-language)
 - [Web Development](#web-development)
 - [Mobile Development](#mobile-development)
+- [Infrastructure / Operations](#infrastructure--operations)
 - [Game Development](#game-development)
 - [AI / Machine Learning / Data Science](#ai--machine-learning--data-science)
+- [Security](#security)
 - [Miscellaneous](#miscellaneous)
 - [Articles](#articles)
 
@@ -40,25 +42,37 @@ Type badges indicate the current resource type or status.
 
 ## Mobile Development
 - [Android Developer Roadmap](https://github.com/mobile-roadmap/android-developer-roadmap) - Android learning roadmap with visual maps, study notes, and companion material. <img alt="Year 2020" src="https://img.shields.io/badge/Year-2020-yellowgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+- [Android Developer Roadmap (Alternative)](https://github.com/skydoves/android-developer-roadmap) - Alternative Android roadmap with comprehensive learning paths across the Android ecosystem. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Flutter Developer Roadmap](https://github.com/olexale/flutter_roadmap) - Flutter roadmap focused on app development topics, tooling, and developer workflow. <img alt="Year 2024" src="https://img.shields.io/badge/Year-2024-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [iOS Developer Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap) - iOS roadmap that outlines the main topics and tools used in Apple platform development. <img alt="Year 2018" src="https://img.shields.io/badge/Year-2018-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+
+## Infrastructure / Operations
+- [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) - Step-by-step DevOps roadmap with learning resources across Git, Linux, containers, CI/CD, cloud, and observability. <img alt="Year 2026" src="https://img.shields.io/badge/Year-2026-brightgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+- [Platform Engineering Roadmap](https://github.com/mbianchidev/platform-engineering-roadmap) - Platform engineering roadmap published as an interactive website with a GitHub-backed source repository. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github"> <img alt="Interactive website" src="https://img.shields.io/badge/Format-Website-0A66C2">
 
 ## Game Development
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap) - Game development roadmap for building the required foundation, tools, and specialties. <img alt="Year 2022" src="https://img.shields.io/badge/Year-2022-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Game Programming Roadmap](https://github.com/miloyip/game-programmer) - Study path for game programmers with an emphasis on core engineering topics. <img alt="Year 2019" src="https://img.shields.io/badge/Year-2019-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 
 ## AI / Machine Learning / Data Science
+- [AI Engineer Roadmap](https://github.com/dswh/ai-engineer-roadmap) - AI engineering roadmap focused on LLM applications, RAG, agents, and LLMOps. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap) - Artificial intelligence roadmap covering theory, tools, and hands-on practice. <img alt="Year 2022" src="https://img.shields.io/badge/Year-2022-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+- [Data Analyst Roadmap](https://github.com/mtahiraslan/data-analyst-roadmap) - Full data analyst roadmap covering statistics, Excel, SQL, BI, Python, and communication skills. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Data Engineer Roadmap](https://github.com/datastacktv/data-engineer-roadmap) - Data engineering study guide for the modern data stack. <img alt="Year 2021" src="https://img.shields.io/badge/Year-2021-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Data Science Roadmap](https://github.com/boringPpl/data-science-roadmap) - Data science roadmap built from learning paths used across major tech companies. <img alt="Year 2020" src="https://img.shields.io/badge/Year-2020-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Data Scientist Roadmap](https://github.com/MrMimic/data-scientist-roadmap) - Companion tutorials and notes for a visual data science roadmap. <img alt="Year 2024" src="https://img.shields.io/badge/Year-2024-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Deep Learning Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) - Reading roadmap through influential deep learning papers. <img alt="Year 2022" src="https://img.shields.io/badge/Year-2022-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Deep Learning Roadmap](https://github.com/instillai/deep-learning-roadmap) - Deep learning starter roadmap with curated references and explanations. <img alt="Year 2020" src="https://img.shields.io/badge/Year-2020-yellowgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+- [LLM Course](https://github.com/mlabonne/llm-course) - Free LLM course with roadmap-style progression and practical Colab notebooks. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [NLP Roadmap](https://github.com/graykode/nlp-roadmap) - NLP study roadmap with mind maps and keyword-based learning guidance. <img alt="Year 2019" src="https://img.shields.io/badge/Year-2019-yellowgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+
+## Security
+- [Cybersecurity Skills and Career Roadmap](https://github.com/jassics/cybersecurity-roadmap) - Cybersecurity roadmap spanning web, network, cloud, container security, DevSecOps, and role-specific guidance. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 
 ## Miscellaneous
 - [Awesome Quality Assurance Roadmap](https://github.com/fityanos/awesome-quality-assurance-roadmap) - Quality assurance and test automation roadmap for software engineers. <img alt="Year 2021" src="https://img.shields.io/badge/Year-2021-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Digital Forensic (DFIR) Specialist Roadmap](https://github.com/Yousha/DFIR-Specialist-Roadmap) - Digital forensics and incident response roadmap for learners building DFIR skills. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+- [Embedded Systems Engineering Roadmap](https://github.com/m3y54m/Embedded-Engineering-Roadmap) - Embedded systems roadmap for beginners and practitioners, with curated learning resources and supporting material. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Hacker Roadmap](https://github.com/Sundowndev/hacker-roadmap) - Archived guide for beginner pentesters with curated tools and references. <img alt="Year 2023" src="https://img.shields.io/badge/Year-2023-yellow"> <img alt="Archived repository" src="https://img.shields.io/badge/Status-Archived-6e7781">
 - [Software Architect Roadmap](https://github.com/AlaaAttya/software-architect-roadmap) - Software architecture roadmap for developers moving toward architect responsibilities. <img alt="Year 2018" src="https://img.shields.io/badge/Year-2018-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Software Design and Architecture Roadmap](https://github.com/stemmlerjs/software-design-and-architecture-roadmap) - Software design and architecture roadmap for generalist developers. <img alt="Year 2019" src="https://img.shields.io/badge/Year-2019-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
