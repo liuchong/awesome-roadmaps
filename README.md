@@ -82,8 +82,12 @@ Type badges indicate the current resource type or status.
 
 ## Articles
 - [A Roadmap To Become A Better Android Developer](https://medium.com/mindorks/a-roadmap-to-become-a-better-android-developer-3038cf7f8c8d) - Medium article with a step-by-step Android learning roadmap and supporting resources. <img alt="Year 2018" src="https://img.shields.io/badge/Year-2018-yellow"> <img alt="Medium article" src="https://img.shields.io/badge/Medium-Article-000000?logo=medium">
+- [Backend Developer Roadmap](https://www.geeksforgeeks.org/backend-developer-roadmap/) - Article covering a backend learning path across web fundamentals, programming languages, databases, APIs, security, and frameworks. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
+- [Cybersecurity Roadmap](https://www.geeksforgeeks.org/cybersecurity-roadmap/) - Article outlining cybersecurity career paths, core skills, and a staged roadmap for getting started. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
 - [Data Analytics Roadmap](https://www.appliedaicourse.com/blog/data-analytics-roadmap/) - Blog article covering a data analytics learning path, skills, and tooling. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
+- [Full Stack Developer Roadmap](https://www.geeksforgeeks.org/full-stack-developer-roadmap/) - Article mapping a full-stack learning path across frontend, backend, databases, version control, and projects. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
 - [Java Full Stack Developer Roadmap](https://www.scaler.com/blog/java-full-stack-developer-roadmap/) - Blog article outlining a Java full-stack learning path and related career topics. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
+- [SQL Roadmap](https://www.geeksforgeeks.org/sql-roadmap/) - Article covering a structured SQL learning path from fundamentals to advanced querying and database skills. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
 
 ## License
 
