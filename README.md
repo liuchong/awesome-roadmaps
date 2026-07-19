@@ -19,6 +19,7 @@ Type badges indicate the current resource type or status.
 - [AI / Machine Learning / Data Science](#ai--machine-learning--data-science)
 - [Security](#security)
 - [Miscellaneous](#miscellaneous)
+- [Tools & Resources](#tools--resources)
 - [Articles](#articles)
 
 ## Programming Language
@@ -69,11 +70,11 @@ Type badges indicate the current resource type or status.
 - [Data Scientist Roadmap](https://github.com/MrMimic/data-scientist-roadmap) - Companion tutorials and notes for a visual data science roadmap. <img alt="Year 2024" src="https://img.shields.io/badge/Year-2024-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Deep Learning Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) - Reading roadmap through influential deep learning papers. <img alt="Year 2022" src="https://img.shields.io/badge/Year-2022-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Deep Learning Roadmap](https://github.com/instillai/deep-learning-roadmap) - Deep learning starter roadmap with curated references and explanations. <img alt="Year 2020" src="https://img.shields.io/badge/Year-2020-yellowgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+- [Forward Deployed Engineer Roadmap](https://github.com/thecoder8890/forward-deployed-engineer-roadmap) - Roadmap of a Forward Deployed Engineer who partners with customers to design, build, and deploy production-ready enterprise systems. <img alt="Year 2026" src="https://img.shields.io/badge/Year-2026-brightgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Hugging Face Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) - Free hands-on AI agents course covering agent fundamentals, smolagents, LangGraph, LlamaIndex, use cases, and evaluation challenges. <img alt="Course" src="https://img.shields.io/badge/Format-Course-0A66C2">
 - [LLM Course](https://github.com/mlabonne/llm-course) - Free LLM course with roadmap-style progression and practical Colab notebooks. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [LLM Systems Engineering Roadmap](https://github.com/h9-tec/llm-systems-engineering-roadmap) - Practical LLM systems roadmap covering internals, inference, RAG, agents, evaluation, and production architecture. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [NLP Roadmap](https://github.com/graykode/nlp-roadmap) - NLP study roadmap with mind maps and keyword-based learning guidance. <img alt="Year 2019" src="https://img.shields.io/badge/Year-2019-yellowgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
-- [Forward Deployed Engineer Roadmap](https://github.com/thecoder8890/forward-deployed-engineer-roadmap) - Roadmap of a Forward Deployed Engineer who partners with customers to design, build, and deploy production-ready enterprise systems. <img alt="Year 2026" src="https://img.shields.io/badge/Year-2026-brightgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 
 ## Security
 - [Cybersecurity Skills and Career Roadmap](https://github.com/jassics/cybersecurity-roadmap) - Cybersecurity roadmap spanning web, network, cloud, container security, DevSecOps, and role-specific guidance. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
@@ -88,9 +89,11 @@ Type badges indicate the current resource type or status.
 - [Software Architect Roadmap](https://github.com/AlaaAttya/software-architect-roadmap) - Software architecture roadmap for developers moving toward architect responsibilities. <img alt="Year 2018" src="https://img.shields.io/badge/Year-2018-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Software Design and Architecture Roadmap](https://github.com/stemmlerjs/software-design-and-architecture-roadmap) - Software design and architecture roadmap for generalist developers. <img alt="Year 2019" src="https://img.shields.io/badge/Year-2019-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [System Design Roadmap](https://github.com/moshafiei/system-design-master-plan) - System design and architecture roadmap focused on large-scale design topics. <img alt="Year 2024" src="https://img.shields.io/badge/Year-2024-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
-- [TutorialSearch](https://tutorialsearch.io/?q=roadmaps) - Free cross-platform search engine indexing 50,000+ tutorials from Udemy, Skillshare, Pluralsight, and other major learning platforms across 45+ categories.
 - [UI/UX Designer Roadmap](https://github.com/togiberlin/ui-ux-designer-roadmap) - UI/UX design roadmap covering the main skills and disciplines in product design. <img alt="Year 2017" src="https://img.shields.io/badge/Year-2017-yellow"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [University Degree Roadmap](https://github.com/IlIllII/collecobrary) - Curated collection of online learning paths and university-level course material. <img alt="Year 2024" src="https://img.shields.io/badge/Year-2024-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
+
+## Tools & Resources
+- [TutorialSearch](https://tutorialsearch.io/?q=roadmaps) - Free cross-platform search engine indexing 50,000+ tutorials from Udemy, Skillshare, Pluralsight, and other major learning platforms across 45+ categories. <img alt="Search tool" src="https://img.shields.io/badge/Type-Tool-0A66C2">
 
 ## Articles
 - [A Roadmap To Become A Better Android Developer](https://medium.com/mindorks/a-roadmap-to-become-a-better-android-developer-3038cf7f8c8d) - Medium article with a step-by-step Android learning roadmap and supporting resources. <img alt="Year 2018" src="https://img.shields.io/badge/Year-2018-yellow"> <img alt="Medium article" src="https://img.shields.io/badge/Medium-Article-000000?logo=medium">
