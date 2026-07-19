@@ -20,7 +20,7 @@ Type badges indicate the current resource type or status.
 - [Security](#security)
 - [Miscellaneous](#miscellaneous)
 - [Tools & Resources](#tools--resources)
-- [Articles](#articles)
+- [Articles & Books](#articles--books)
 
 ## Programming Language
 - [C++ Developer Roadmap](https://github.com/salmer/CppDeveloperRoadmap) - C++ learning roadmap with articles, visual maps, and supporting resources. <img alt="Year 2024" src="https://img.shields.io/badge/Year-2024-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
@@ -95,8 +95,9 @@ Type badges indicate the current resource type or status.
 ## Tools & Resources
 - [TutorialSearch](https://tutorialsearch.io/?q=roadmaps) - Free cross-platform search engine indexing 50,000+ tutorials from Udemy, Skillshare, Pluralsight, and other major learning platforms across 45+ categories. <img alt="Search tool" src="https://img.shields.io/badge/Type-Tool-0A66C2">
 
-## Articles
+## Articles & Books
 - [A Roadmap To Become A Better Android Developer](https://medium.com/mindorks/a-roadmap-to-become-a-better-android-developer-3038cf7f8c8d) - Medium article with a step-by-step Android learning roadmap and supporting resources. <img alt="Year 2018" src="https://img.shields.io/badge/Year-2018-yellow"> <img alt="Medium article" src="https://img.shields.io/badge/Medium-Article-000000?logo=medium">
+- [AI Agents in Depth](https://github.com/bojieli/ai-agent-book) - Open-source book on AI agent design and engineering, with bilingual (Chinese/English) text and per-chapter code covering context engineering, tools, evaluation, and multi-agent systems. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Book" src="https://img.shields.io/badge/Format-Book-6F42C1"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Backend Developer Roadmap](https://www.geeksforgeeks.org/websites-apps/backend-developer-roadmap/) - Article covering a backend learning path across web fundamentals, programming languages, databases, APIs, security, and frameworks. <img alt="Year 2025" src="https://img.shields.io/badge/Year-2025-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
 - [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) - Anthropic engineering article covering practical patterns for workflows, autonomous agents, evaluation, and agent-computer interfaces. <img alt="Year 2024" src="https://img.shields.io/badge/Year-2024-green"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
 - [Cybersecurity Roadmap](https://www.geeksforgeeks.org/cybersecurity/cybersecurity-roadmap/) - Article outlining cybersecurity career paths, core skills, and a staged roadmap for getting started. <img alt="Year 2026" src="https://img.shields.io/badge/Year-2026-brightgreen"> <img alt="Blog article" src="https://img.shields.io/badge/Blog-Article-0A66C2">
