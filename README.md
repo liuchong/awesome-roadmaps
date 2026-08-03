@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.svg" alt="Awesome Roadmaps logo" width="96">
+</p>
+
 # Awesome Roadmaps [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A curated list of roadmaps, mostly about software development, which give you a clear route to improve your knowledge or skills.
