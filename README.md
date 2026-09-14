@@ -55,6 +55,7 @@ Type badges indicate the current resource type or status.
 ## Infrastructure / Operations
 - [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) - Step-by-step DevOps roadmap with learning resources across Git, Linux, containers, CI/CD, cloud, and observability. <img alt="Year 2026" src="https://img.shields.io/badge/Year-2026-brightgreen"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
 - [Platform Engineering Roadmap](https://github.com/mbianchidev/platform-engineering-roadmap) - Platform engineering roadmap published as an interactive website with a GitHub-backed source repository. <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github"> <img alt="Interactive website" src="https://img.shields.io/badge/Format-Website-0A66C2">
+- [Cloud Engineer Roadmap](https://ciphemicacademia.in/roadmaps/cloud-engineer) - Cloud engineering roadmap covering core cloud platforms, infrastructure, and deployment skills through hands-on projects.
 
 ## Game Development
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap) - Game development roadmap for building the required foundation, tools, and specialties. <img alt="Year 2022" src="https://img.shields.io/badge/Year-2022-green"> <img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github">
