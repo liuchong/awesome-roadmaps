@@ -1,6 +1,3 @@
-# awesome_bot
-ab-results*
-
 # temporary files
 tmp
 *~
@@ -8,3 +5,4 @@ tmp
 .#*
 .DS_Store
 nohup.out
+__pycache__/
