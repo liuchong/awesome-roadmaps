@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Awesome Roadmaps — Curated Learning Routes for Developers</title>
+    <meta name="description" content="A community-curated atlas of software engineering, AI, cloud, mobile, security, and computer science learning roadmaps.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Awesome Roadmaps">
+    <meta property="og:description" content="Curated learning routes across programming languages, web, mobile, cloud, AI, security, and engineering.">
+    <meta property="og:url" content="https://roadmaps.wiki/">
+    <link rel="canonical" href="https://roadmaps.wiki/">
+    <link rel="icon" type="image/svg+xml" href="pages/logo.svg">
+    <link rel="stylesheet" href="pages/styles.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "eliscript/browser": "https://unpkg.com/eliscript@0.1.3/browser/host.mjs",
+          "eliscript/": "https://unpkg.com/eliscript@0.1.3/"
+        }
+      }
+    </script>
+    <script type="text/eliscript" src="pages/app.eli"></script>
+    <script type="module">
+      import { mountEliscriptScripts } from "eliscript/browser";
+      mountEliscriptScripts();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#directory">Skip to roadmaps</a>
+
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <a class="brand" href="./" aria-label="Awesome Roadmaps home">
+          <img class="brand-logo" src="pages/logo.svg" width="32" height="32" alt="">
+          <span class="brand-text">
+            <strong>Awesome Roadmaps</strong>
+            <small>roadmaps.wiki</small>
+          </span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="#directory">Explore</a>
+          <a href="#contribute">Contribute</a>
+          <a href="https://github.com/liuchong/awesome-roadmaps" target="_blank" rel="noopener">GitHub</a>
+          <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch color theme">
+            <span data-theme-label>Theme</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="shell hero-inner">
+          <div class="hero-badge-row">
+            <a class="pill-link" href="https://awesome.re" target="_blank" rel="noopener">Awesome Curated List</a>
+            <span class="pill-sep" aria-hidden="true">·</span>
+            <a class="pill-link" href="https://license.pub/0pl/" target="_blank" rel="noopener">0PL Public License</a>
+          </div>
+          <h1>Clear routes to level up your engineering skills.</h1>
+          <p class="hero-lead">
+            A community-maintained directory of developer roadmaps, structured curricula, interactive skill trees, and practical study guides across software engineering, AI, infrastructure, and beyond.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#directory">Browse the Atlas</a>
+            <button class="btn btn-secondary" type="button" data-random-btn hidden>Surprise Me</button>
+            <a class="btn btn-ghost" href="https://github.com/liuchong/awesome-roadmaps/pulls" target="_blank" rel="noopener">Submit a Roadmap →</a>
+          </div>
+
+          <dl class="stats-strip" aria-label="Directory statistics">
+            <div class="stat-card">
+              <dt>Curated Roadmaps</dt>
+              <dd data-stat-total>74</dd>
+            </div>
+            <div class="stat-card">
+              <dt>Domains &amp; Tracks</dt>
+              <dd data-stat-categories>10</dd>
+            </div>
+            <div class="stat-card">
+              <dt>2025–2026 Updated</dt>
+              <dd data-stat-fresh>26</dd>
+            </div>
+            <div class="stat-card">
+              <dt>Interactive &amp; Courses</dt>
+              <dd data-stat-interactive>10</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="directory" class="directory-section" aria-label="Roadmap directory">
+        <div class="shell">
+          <div class="controls-panel" data-controls>
+            <div class="search-row">
+              <label class="search-box" for="roadmap-search">
+                <svg class="search-icon" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+                  <path d="M8.5 3a5.5 5.5 0 1 0 3.47 9.77l4.13 4.13a.75.75 0 1 0 1.06-1.06l-4.13-4.13A5.5 5.5 0 0 0 8.5 3ZM4.5 8.5a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" fill="currentColor"/>
+                </svg>
+                <input
+                  id="roadmap-search"
+                  type="search"
+                  placeholder="Search languages, AI, system design, cloud, RAG, security…"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-search
+                >
+                <kbd class="search-kbd" aria-hidden="true">/</kbd>
+              </label>
+
+              <div class="select-group">
+                <label class="visually-hidden" for="format-select">Resource format</label>
+                <select id="format-select" class="control-select" data-format-filter>
+                  <option value="all">All formats</option>
+                  <option value="repo">GitHub repos</option>
+                  <option value="website">Interactive websites</option>
+                  <option value="article">Articles</option>
+                  <option value="course-book">Courses, books &amp; PDFs</option>
+                </select>
+
+                <label class="visually-hidden" for="year-select">Updated year</label>
+                <select id="year-select" class="control-select" data-year-filter>
+                  <option value="all">All years</option>
+                  <option value="2026">2026</option>
+                  <option value="recent">2024 &amp; newer</option>
+                </select>
+
+                <label class="visually-hidden" for="sort-select">Sort order</label>
+                <select id="sort-select" class="control-select" data-sort-select>
+                  <option value="alpha">Sort: A → Z</option>
+                  <option value="newest">Sort: Newest year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="category-pills" role="tablist" aria-label="Categories" data-category-bar></div>
+
+            <div class="results-bar">
+              <p class="results-summary" data-results-summary>Loading curated roadmaps…</p>
+              <button class="reset-link" type="button" data-reset-btn hidden>Reset filters</button>
+            </div>
+          </div>
+
+          <div class="spotlight-banner" data-spotlight hidden>
+            <div class="spotlight-body">
+              <span class="spotlight-kicker">Random Pick</span>
+              <a class="spotlight-title" data-spotlight-link href="#" target="_blank" rel="noopener"></a>
+              <p class="spotlight-desc" data-spotlight-desc></p>
+            </div>
+            <button class="spotlight-close" type="button" data-spotlight-close aria-label="Dismiss pick">×</button>
+          </div>
+
+          <div class="catalog-root" data-catalog>
+            <div class="loading-state" data-loading>
+              <p>Compiling Eliscript &amp; loading the latest roadmap catalog…</p>
+              <p class="loading-fallback">
+                If scripts are blocked in your browser, you can browse the complete Markdown list directly on
+                <a href="https://github.com/liuchong/awesome-roadmaps#readme">GitHub</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="empty-state" data-empty hidden>
+            <h2>No roadmaps match your current filters.</h2>
+            <p>Try broadening your search terms or clearing the active format/year filters.</p>
+            <button class="btn btn-secondary" type="button" data-empty-reset>Show all roadmaps</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contribute" class="contribute-section" aria-labelledby="contribute-title">
+        <div class="shell contribute-card">
+          <div>
+            <span class="section-eyebrow">Open Collaboration</span>
+            <h2 id="contribute-title">Know or maintain a great roadmap?</h2>
+            <p>
+              Contributions are warmly encouraged. Open a pull request editing <code>README.md</code>—even if minor badge or formatting details need adjustment, maintainers are happy to merge worthy roadmaps first and help polish them.
+            </p>
+          </div>
+          <div class="contribute-actions">
+            <a class="btn btn-primary" href="https://github.com/liuchong/awesome-roadmaps/edit/master/README.md" target="_blank" rel="noopener">Edit README.md</a>
+            <a class="btn btn-secondary" href="https://github.com/liuchong/awesome-roadmaps/blob/master/contributing.md" target="_blank" rel="noopener">Contribution Guide</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>
+          <strong>Awesome Roadmaps</strong> · Built with live in-browser
+          <a href="https://eliscript.com/" target="_blank" rel="noopener">Eliscript</a>
+          from a single Markdown source of truth.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/liuchong/awesome-roadmaps" target="_blank" rel="noopener">Repository</a>
+          <a href="https://github.com/liuchong/awesome-roadmaps/pulls" target="_blank" rel="noopener">Pull Requests</a>
+          <a href="https://github.com/liuchong/awesome-roadmaps/issues" target="_blank" rel="noopener">Issues</a>
+          <a href="https://license.pub/0pl/" target="_blank" rel="noopener">0PL License</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<svg width="128" height="128" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Awesome Roadmaps</title>
+  <desc>A simple learning route with three milestones ending in a star.</desc>
+  <defs>
+    <linearGradient id="route" x1="16" y1="80" x2="76" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M17 78C37 78 43 71 41 59C39 47 47 43 56 38C67 32 72 24 73 15"
+    stroke="url(#route)"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+  <circle cx="17" cy="78" r="5.5" fill="white" stroke="#38BDF8" stroke-width="4"/>
+  <circle cx="41" cy="58" r="5.5" fill="white" stroke="#60A5FA" stroke-width="4"/>
+  <circle cx="56" cy="38" r="5.5" fill="white" stroke="#7394FA" stroke-width="4"/>
+  <path
+    d="M73 8C74.2 12.2 76.8 14.8 81 16C76.8 17.2 74.2 19.8 73 24C71.8 19.8 69.2 17.2 65 16C69.2 14.8 71.8 12.2 73 8Z"
+    fill="#818CF8"
+  />
+</svg>

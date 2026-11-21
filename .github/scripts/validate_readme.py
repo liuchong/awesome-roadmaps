@@ -215,6 +215,48 @@ def validate_readme_text(text: str, repo_root: pathlib.Path | None = None) -> li
     return errors
 
 
+FORBIDDEN_DOCS_SUFFIXES = {".js", ".mjs", ".cjs", ".ts", ".tsx", ".jsx"}
+
+
+def validate_docs_paths(rel_paths: list[str]) -> list[str]:
+    errors: list[str] = []
+    path_set = set(rel_paths)
+    if "index.html" not in path_set:
+        errors.append("docs/index.html entry point is missing")
+    for p in sorted(rel_paths):
+        parts = p.split("/")
+        if len(parts) == 1:
+            if parts[0] not in {"index.html", "CNAME"}:
+                errors.append(f"Unexpected file in docs/ root (must live under docs/pages/): docs/{p}")
+        elif parts[0] != "pages":
+            errors.append(f"Unexpected subdirectory under docs/ (must live under docs/pages/): docs/{p}")
+        suffix = pathlib.PurePosixPath(p).suffix.lower()
+        if suffix in FORBIDDEN_DOCS_SUFFIXES:
+            errors.append(f"Precompiled or handwritten JS/TS is not allowed under docs/: docs/{p}")
+    if not any(p.startswith("pages/") and p.endswith(".eli") for p in rel_paths):
+        errors.append("Expected at least one Eliscript (.eli) source file under docs/pages/")
+    return errors
+
+
+def validate_docs_layout(repo_root: pathlib.Path) -> list[str]:
+    docs_dir = repo_root / "docs"
+    if not docs_dir.is_dir():
+        return []
+    rel_paths = [
+        p.relative_to(docs_dir).as_posix()
+        for p in docs_dir.rglob("*")
+        if p.is_file()
+    ]
+    errors = validate_docs_paths(rel_paths)
+    for rel in rel_paths:
+        if rel.endswith(".svg"):
+            try:
+                ET.parse(docs_dir / rel)
+            except ET.ParseError as exc:
+                errors.append(f"Invalid SVG XML in docs/{rel}: {exc}")
+    return errors
+
+
 def run_self_tests() -> None:
     valid_doc = """# Awesome Roadmaps
 
@@ -259,6 +301,12 @@ License text.
     period_doc = valid_doc.replace("Beta learning article.", "Beta learning article")
     assert any("must end with a period" in e for e in validate_readme_text(period_doc))
 
+    # 7. Valid docs/ Pages layout passes; stray root files or precompiled JS fail
+    valid_docs = ["index.html", "CNAME", "pages/app.eli", "pages/styles.css", "pages/logo.svg"]
+    assert validate_docs_paths(valid_docs) == []
+    assert any("not allowed under docs/" in e for e in validate_docs_paths(valid_docs + ["pages/app.mjs"]))
+    assert any("Unexpected file in docs/ root" in e for e in validate_docs_paths(valid_docs + ["styles.css"]))
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -278,6 +326,7 @@ def main() -> int:
     readme_path = args.readme.resolve()
     text = readme_path.read_text(encoding="utf-8")
     errors = validate_readme_text(text, repo_root=readme_path.parent)
+    errors.extend(validate_docs_layout(readme_path.parent))
     if errors:
         for err in errors:
             print(f"ERROR: {err}", file=sys.stderr)

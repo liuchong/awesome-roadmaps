@@ -1,0 +1,560 @@
+;; Awesome Roadmaps interactive atlas (`roadmaps.wiki`).
+;;
+;; Compiled and executed live in the browser by `eliscript@0.1.3` via
+;; `eliscript/browser` (`mountEliscriptScripts`). No precompiled JavaScript is
+;; stored in the repository.
+
+(module roadmaps.app
+  (import "eliscript/platform/browser"
+          browserCapabilities browserDocument browserFetch)
+
+  (defconst capabilities
+    (browserCapabilities globalThis.globalThis (js-array "document" "network")))
+  (defconst page (browserDocument capabilities))
+
+  ;; ------------------------------------------------------------- host helpers
+
+  (defun field (object name) (get object name))
+
+  (defun set-field (object name value)
+    (Reflect/set object name value))
+
+  (defun present? (value)
+    (not (or (nil? value) (undefined? value))))
+
+  (defun node (selector)
+    (js-call page :querySelector selector))
+
+  (defun create-el (tag class-name)
+    (let ((el (js-call page :createElement tag)))
+      (when (and (present? class-name) (> (js-length class-name) 0))
+        (set-field el "className" class-name))
+      el))
+
+  (defun set-text (element value)
+    (when (present? element)
+      (set-field element "textContent" (str value))))
+
+  (defun set-hidden (element hidden)
+    (when (present? element)
+      (set-field element "hidden" (if hidden t false))))
+
+  (defun watch (element event handler)
+    (when (present? element)
+      (js-call element :addEventListener event handler)))
+
+  (defun each (values handler)
+    (let ((index 0)
+          (total (js-length values)))
+      (while (< index total)
+        (funcall handler (js-nth index values) index)
+        (setq index (1+ index)))))
+
+  (defun lowered (value)
+    (js-call (str value) :toLowerCase))
+
+  (defun slugify (heading)
+    (let* ((lower (lowered (js-call (str heading) :trim)))
+           (cleaned (js-call lower :replace (new globalThis.RegExp "[^a-z0-9 _-]" "g") "")))
+      (js-call cleaned :replaceAll " " "-")))
+
+  ;; ---------------------------------------------------------- markdown parser
+
+  (defconst entry-pattern
+    (new globalThis.RegExp "^- \\[([^\\]]+)\\]\\(([^)\\s]+)\\) - (.+?)((?: <img [^>]+>)+)$"))
+
+  (defconst badge-pattern
+    (new globalThis.RegExp "<img alt=\"([^\"]+)\" src=\"https://img\\.shields\\.io/badge/([^\"]+)\">" "g"))
+
+  (defconst year-spec-pattern
+    (new globalThis.RegExp "^Year-(\\d{4})-([a-z]+)$"))
+
+  (defun source-label-for (url)
+    (try
+      (let* ((parsed (new globalThis.URL url))
+             (host (js-call (field parsed "hostname") :replace (new globalThis.RegExp "^www\\.") "")))
+        (if (= host "github.com")
+            (let ((parts (js-call (js-call (field parsed "pathname") :split "/") :filter
+                           (lambda (seg) (> (js-length seg) 0)))))
+              (if (>= (js-length parts) 2)
+                  (str (js-nth 0 parts) "/" (js-nth 1 parts))
+                host))
+          host))
+      (catch err url)))
+
+  (defun classify-type-spec (spec)
+    (cond
+      ((js-call spec :startsWith "GitHub-Repo-")
+        (js-object :kind "repo" :label "GitHub"))
+      ((js-call spec :startsWith "Format-Website-")
+        (js-object :kind "website" :label "Website"))
+      ((js-call spec :startsWith "Format-Course-")
+        (js-object :kind "course" :label "Course"))
+      ((js-call spec :startsWith "Format-Book-")
+        (js-object :kind "book" :label "Book"))
+      ((js-call spec :startsWith "Format-PDF-")
+        (js-object :kind "pdf" :label "PDF"))
+      ((js-call spec :startsWith "Blog-Article-")
+        (js-object :kind "article" :label "Article"))
+      ((js-call spec :startsWith "Medium-Article-")
+        (js-object :kind "article" :label "Medium"))
+      ((js-call spec :startsWith "Type-Tool-")
+        (js-object :kind "tool" :label "Tool"))
+      ((js-call spec :startsWith "Status-Archived-")
+        (js-object :kind "archived" :label "Archived"))
+      (t
+        (js-object :kind "other" :label spec))))
+
+  (defun parse-badges (badges-raw)
+    (let ((year 0)
+          (year-color "")
+          (types (js-array))
+          (kinds (js-array))
+          (matcher (new globalThis.RegExp (field badge-pattern "source") "g"))
+          (match nil))
+      (setq match (js-call matcher :exec badges-raw))
+      (while (present? match)
+        (let* ((spec (js-nth 2 match))
+               (ym (js-call year-spec-pattern :exec spec)))
+          (if (present? ym)
+              (progn
+                (setq year (funcall globalThis.Number (js-nth 1 ym)))
+                (setq year-color (js-nth 2 ym)))
+            (let ((classified (classify-type-spec spec)))
+              (js-call types :push classified)
+              (js-call kinds :push (field classified "kind")))))
+        (setq match (js-call matcher :exec badges-raw)))
+      (js-object :year year :yearColor year-color :types types :kinds kinds)))
+
+  (defun parse-readme (markdown)
+    (let ((lines (js-call (str markdown) :split (new globalThis.RegExp "\\r?\\n")))
+          (categories (js-array))
+          (items (js-array))
+          (current-cat "")
+          (item-id 0))
+      (each lines
+            (lambda (line idx)
+              (cond
+                ((js-call line :startsWith "## ")
+                  (let ((heading (js-call (js-call line :slice 3) :trim)))
+                    (if (or (= heading "Contents") (= heading "License"))
+                        (setq current-cat "")
+                      (progn
+                        (setq current-cat heading)
+                        (js-call categories :push
+                          (js-object :name heading :slug (slugify heading)))))))
+                ((and (> (js-length current-cat) 0) (js-call line :startsWith "- ["))
+                  (let ((m (js-call entry-pattern :exec line)))
+                    (when (present? m)
+                      (let* ((title (js-nth 1 m))
+                             (url (js-nth 2 m))
+                             (desc (js-nth 3 m))
+                             (badge-info (parse-badges (js-nth 4 m)))
+                             (source-label (source-label-for url))
+                             (year (field badge-info "year"))
+                             (types (field badge-info "types"))
+                             (type-labels (js-call types :map (lambda (b) (field b "label"))))
+                             (searchable (lowered
+                                           (str title " " desc " " current-cat " "
+                                                source-label " "
+                                                (if (> year 0) (str year) "") " "
+                                                (js-call type-labels :join " ")))))
+                        (setq item-id (1+ item-id))
+                        (js-call items :push
+                          (js-object
+                            :id item-id
+                            :category current-cat
+                            :categorySlug (slugify current-cat)
+                            :title title
+                            :url url
+                            :desc desc
+                            :source source-label
+                            :year year
+                            :yearColor (field badge-info "yearColor")
+                            :types types
+                            :kinds (field badge-info "kinds")
+                            :searchable searchable)))))))))
+      (js-object :categories categories :items items)))
+
+  ;; ----------------------------------------------------------- data retrieval
+
+  (defasync try-fetch-text (url)
+    (try
+      (let ((response (await (browserFetch capabilities url undefined))))
+        (if (field response "ok")
+            (await (js-call response :text))
+          nil))
+      (catch err nil)))
+
+  (defasync load-catalog-markdown ()
+    (let ((primary (await (try-fetch-text "pages/roadmaps.md"))))
+      (if (present? primary)
+          primary
+        (let ((local-root (await (try-fetch-text "../README.md"))))
+          (if (present? local-root)
+              local-root
+            (await (try-fetch-text
+                     "https://raw.githubusercontent.com/liuchong/awesome-roadmaps/master/README.md")))))))
+
+  ;; ------------------------------------------------------------ theme control
+
+  (defconst theme-storage-key "roadmaps-wiki-theme")
+
+  (defun read-stored-theme ()
+    (try
+      (let ((ls (field globalThis.globalThis "localStorage")))
+        (if (present? ls)
+            (or (js-call ls :getItem theme-storage-key) "auto")
+          "auto"))
+      (catch err "auto")))
+
+  (defun write-stored-theme (mode)
+    (try
+      (let ((ls (field globalThis.globalThis "localStorage")))
+        (when (present? ls)
+          (js-call ls :setItem theme-storage-key mode)))
+      (catch err nil)))
+
+  (defun apply-theme (mode)
+    (let ((root (field page "documentElement"))
+          (label (node "[data-theme-label]")))
+      (js-call root :setAttribute "data-theme" mode)
+      (set-text label
+        (cond
+          ((= mode "dark") "Theme: Dark")
+          ((= mode "light") "Theme: Light")
+          (t "Theme: Auto")))))
+
+  (defun next-theme (current)
+    (cond
+      ((= current "auto") "dark")
+      ((= current "dark") "light")
+      (t "auto")))
+
+  ;; -------------------------------------------------------- filtering & render
+
+  (defun has-kind? (kinds target)
+    (js-call kinds :includes target))
+
+  (defun matches-format? (item fmt)
+    (let ((kinds (field item "kinds")))
+      (cond
+        ((= fmt "all") t)
+        ((= fmt "repo") (has-kind? kinds "repo"))
+        ((= fmt "website") (or (has-kind? kinds "website") (has-kind? kinds "tool")))
+        ((= fmt "article") (has-kind? kinds "article"))
+        ((= fmt "course-book")
+          (or (has-kind? kinds "course")
+              (has-kind? kinds "book")
+              (has-kind? kinds "pdf")))
+        (t t))))
+
+  (defun matches-year? (item yr-filter)
+    (let ((year (field item "year")))
+      (cond
+        ((= yr-filter "all") t)
+        ((= yr-filter "2026") (>= year 2026))
+        ((= yr-filter "recent") (>= year 2024))
+        (t t))))
+
+  (defun matches-query? (item query)
+    (if (= query "")
+        t
+      (let ((tokens (js-call (js-call query :split (new globalThis.RegExp "\\s+")) :filter
+                      (lambda (tok) (> (js-length tok) 0))))
+            (haystack (field item "searchable"))
+            (ok t)
+            (idx 0))
+        (while (and ok (< idx (js-length tokens)))
+          (unless (js-call haystack :includes (js-nth idx tokens))
+            (setq ok false))
+          (setq idx (1+ idx)))
+        ok)))
+
+  (defun filter-items (items state)
+    (let ((cat (field state "category"))
+          (fmt (field state "format"))
+          (yr (field state "year"))
+          (q (lowered (js-call (field state "query") :trim))))
+      (js-call items :filter
+        (lambda (item)
+          (and (or (= cat "all") (= (field item "categorySlug") cat))
+               (matches-format? item fmt)
+               (matches-year? item yr)
+               (matches-query? item q))))))
+
+  (defun sort-section-items (items sort-mode)
+    (let ((copy (Array/from items)))
+      (if (= sort-mode "newest")
+          (js-call copy :sort
+            (lambda (a b)
+              (let ((ya (field a "year"))
+                    (yb (field b "year")))
+                (if (= ya yb)
+                    (js-call (lowered (field a "title")) :localeCompare (lowered (field b "title")))
+                  (- yb ya)))))
+        copy)))
+
+  (defun build-card (item highlighted-id)
+    (let* ((card (create-el "article"
+                   (if (= (field item "id") highlighted-id)
+                       "roadmap-card is-highlighted"
+                     "roadmap-card")))
+           (top (create-el "div" "card-top"))
+           (link (create-el "a" "card-title-link"))
+           (title-span (create-el "span" ""))
+           (arrow (create-el "span" "card-arrow"))
+           (desc (create-el "p" "card-desc"))
+           (footer (create-el "div" "card-footer"))
+           (source (create-el "span" "card-source"))
+           (badges (create-el "div" "card-badges"))
+           (year (field item "year")))
+      (js-call card :setAttribute "data-roadmap-id" (str (field item "id")))
+      (js-call link :setAttribute "href" (field item "url"))
+      (js-call link :setAttribute "target" "_blank")
+      (js-call link :setAttribute "rel" "noopener")
+      (set-text title-span (field item "title"))
+      (set-text arrow "↗")
+      (js-call arrow :setAttribute "aria-hidden" "true")
+      (js-call link :appendChild title-span)
+      (js-call link :appendChild arrow)
+      (set-text desc (field item "desc"))
+      (js-call top :appendChild link)
+      (js-call top :appendChild desc)
+
+      (set-text source (field item "source"))
+      (when (> year 0)
+        (let ((yr-tag (create-el "span" (str "tag tag-year-" (field item "yearColor")))))
+          (set-text yr-tag (str year))
+          (js-call badges :appendChild yr-tag)))
+      (each (field item "types")
+            (lambda (tp idx)
+              (let ((tp-tag (create-el "span" "tag tag-type")))
+                (set-text tp-tag (field tp "label"))
+                (js-call badges :appendChild tp-tag))))
+
+      (js-call footer :appendChild source)
+      (js-call footer :appendChild badges)
+      (js-call card :appendChild top)
+      (js-call card :appendChild footer)
+      card))
+
+  (defun render-category-pills (bar categories items active-slug on-select)
+    (let ((frag (js-call page :createDocumentFragment))
+          (all-btn (create-el "button" "category-pill")))
+      (set-field all-btn "type" "button")
+      (js-call all-btn :setAttribute "role" "tab")
+      (js-call all-btn :setAttribute "aria-selected" (if (= active-slug "all") "true" "false"))
+      (set-text all-btn (str "All · " (js-length items)))
+      (watch all-btn "click" (lambda (ev) (funcall on-select "all")))
+      (js-call frag :appendChild all-btn)
+
+      (each categories
+            (lambda (cat idx)
+              (let* ((slug (field cat "slug"))
+                     (cnt (js-length
+                            (js-call items :filter
+                              (lambda (it) (= (field it "categorySlug") slug)))))
+                     (btn (create-el "button" "category-pill")))
+                (set-field btn "type" "button")
+                (js-call btn :setAttribute "role" "tab")
+                (js-call btn :setAttribute "aria-selected" (if (= active-slug slug) "true" "false"))
+                (set-text btn (str (field cat "name") " · " cnt))
+                (watch btn "click" (lambda (ev) (funcall on-select slug)))
+                (js-call frag :appendChild btn))))
+      (js-call bar :replaceChildren frag)))
+
+  (defun update-stats (catalog)
+    (let* ((items (field catalog "items"))
+           (categories (field catalog "categories"))
+           (fresh (js-length (js-call items :filter (lambda (it) (>= (field it "year") 2025)))))
+           (interactive (js-length
+                          (js-call items :filter
+                            (lambda (it)
+                              (let ((kinds (field it "kinds")))
+                                (or (has-kind? kinds "website")
+                                    (has-kind? kinds "course")
+                                    (has-kind? kinds "tool"))))))))
+      (set-text (node "[data-stat-total]") (js-length items))
+      (set-text (node "[data-stat-categories]") (js-length categories))
+      (set-text (node "[data-stat-fresh]") fresh)
+      (set-text (node "[data-stat-interactive]") interactive)))
+
+  (defun default-filter-state? (state)
+    (and (= (field state "category") "all")
+         (= (field state "format") "all")
+         (= (field state "year") "all")
+         (= (js-call (field state "query") :trim) "")
+         (= (field state "sort") "alpha")))
+
+  (defun render-directory (catalog state)
+    (let* ((all-items (field catalog "items"))
+           (categories (field catalog "categories"))
+           (filtered (filter-items all-items state))
+           (root (node "[data-catalog]"))
+           (empty (node "[data-empty]"))
+           (summary (node "[data-results-summary]"))
+           (reset-btn (node "[data-reset-btn]"))
+           (bar (node "[data-category-bar]"))
+           (frag (js-call page :createDocumentFragment))
+           (shown-sections 0))
+      (render-category-pills bar categories all-items (field state "category")
+        (lambda (slug)
+          (set-field state "category" slug)
+          (render-directory catalog state)))
+
+      (each categories
+            (lambda (cat idx)
+              (let* ((slug (field cat "slug"))
+                     (sec-items (sort-section-items
+                                  (js-call filtered :filter
+                                    (lambda (it) (= (field it "categorySlug") slug)))
+                                  (field state "sort"))))
+                (when (> (js-length sec-items) 0)
+                  (setq shown-sections (1+ shown-sections))
+                  (let ((section (create-el "section" "category-section"))
+                        (header (create-el "div" "section-header"))
+                        (h2 (create-el "h2" ""))
+                        (count-el (create-el "span" "section-count"))
+                        (grid (create-el "div" "cards-grid")))
+                    (set-field section "id" slug)
+                    (set-text h2 (field cat "name"))
+                    (set-text count-el
+                      (str (js-length sec-items)
+                           (if (= (js-length sec-items) 1) " roadmap" " roadmaps")))
+                    (js-call header :appendChild h2)
+                    (js-call header :appendChild count-el)
+                    (each sec-items
+                          (lambda (item j)
+                            (js-call grid :appendChild
+                              (build-card item (field state "highlightedId")))))
+                    (js-call section :appendChild header)
+                    (js-call section :appendChild grid)
+                    (js-call frag :appendChild section))))))
+
+      (js-call root :replaceChildren frag)
+      (set-hidden empty (> (js-length filtered) 0))
+      (set-hidden reset-btn (default-filter-state? state))
+      (set-text summary
+        (str "Showing " (js-length filtered) " of " (js-length all-items)
+             " curated roadmaps across " shown-sections
+             (if (= shown-sections 1) " category" " categories")))))
+
+  ;; --------------------------------------------------------------- bootstrap
+
+  (defasync start ()
+    (let ((theme-mode (read-stored-theme)))
+      (apply-theme theme-mode)
+      (watch (node "[data-theme-toggle]") "click"
+        (lambda (ev)
+          (setq theme-mode (next-theme theme-mode))
+          (write-stored-theme theme-mode)
+          (apply-theme theme-mode))))
+
+    (let ((markdown (await (load-catalog-markdown))))
+      (if (not (present? markdown))
+          (set-text (node "[data-results-summary]")
+            "Unable to load roadmap catalog right now. Please browse directly on GitHub.")
+        (let* ((catalog (parse-readme markdown))
+               (state (js-object
+                        :query ""
+                        :category "all"
+                        :format "all"
+                        :year "all"
+                        :sort "alpha"
+                        :highlightedId 0))
+               (search-input (node "[data-search]"))
+               (format-sel (node "[data-format-filter]"))
+               (year-sel (node "[data-year-filter]"))
+               (sort-sel (node "[data-sort-select]"))
+               (random-btn (node "[data-random-btn]"))
+               (spotlight (node "[data-spotlight]"))
+               (spotlight-link (node "[data-spotlight-link]"))
+               (spotlight-desc (node "[data-spotlight-desc]"))
+               (reset-all (lambda ()
+                            (set-field state "query" "")
+                            (set-field state "category" "all")
+                            (set-field state "format" "all")
+                            (set-field state "year" "all")
+                            (set-field state "sort" "alpha")
+                            (set-field state "highlightedId" 0)
+                            (when (present? search-input) (set-field search-input "value" ""))
+                            (when (present? format-sel) (set-field format-sel "value" "all"))
+                            (when (present? year-sel) (set-field year-sel "value" "all"))
+                            (when (present? sort-sel) (set-field sort-sel "value" "alpha"))
+                            (set-hidden spotlight t)
+                            (render-directory catalog state))))
+          (update-stats catalog)
+          (set-hidden random-btn false)
+          (render-directory catalog state)
+
+          (watch search-input "input"
+            (lambda (ev)
+              (set-field state "query" (field search-input "value"))
+              (render-directory catalog state)))
+
+          (watch format-sel "change"
+            (lambda (ev)
+              (set-field state "format" (field format-sel "value"))
+              (render-directory catalog state)))
+
+          (watch year-sel "change"
+            (lambda (ev)
+              (set-field state "year" (field year-sel "value"))
+              (render-directory catalog state)))
+
+          (watch sort-sel "change"
+            (lambda (ev)
+              (set-field state "sort" (field sort-sel "value"))
+              (render-directory catalog state)))
+
+          (watch (node "[data-reset-btn]") "click" (lambda (ev) (funcall reset-all)))
+          (watch (node "[data-empty-reset]") "click" (lambda (ev) (funcall reset-all)))
+          (watch (node "[data-spotlight-close]") "click"
+            (lambda (ev)
+              (set-field state "highlightedId" 0)
+              (set-hidden spotlight t)
+              (render-directory catalog state)))
+
+          (watch random-btn "click"
+            (lambda (ev)
+              (let* ((pool (filter-items (field catalog "items") state))
+                     (actual-pool (if (> (js-length pool) 0) pool (field catalog "items"))))
+                (when (> (js-length actual-pool) 0)
+                  (let* ((idx (js-call globalThis.Math :floor
+                                (* (js-call globalThis.Math :random) (js-length actual-pool))))
+                         (chosen (js-nth idx actual-pool)))
+                    (set-field state "highlightedId" (field chosen "id"))
+                    (when (present? spotlight-link)
+                      (js-call spotlight-link :setAttribute "href" (field chosen "url"))
+                      (set-text spotlight-link (str (field chosen "title") " ↗")))
+                    (set-text spotlight-desc
+                      (str (field chosen "category") " — " (field chosen "desc")))
+                    (set-hidden spotlight false)
+                    (render-directory catalog state)
+                    (let ((card (node (str "[data-roadmap-id=\"" (field chosen "id") "\"]"))))
+                      (when (present? card)
+                        (js-call card :scrollIntoView
+                          (js-object :behavior "smooth" :block "center")))))))))
+
+          (watch page "keydown"
+            (lambda (ev)
+              (let ((key (field ev "key"))
+                    (active (field page "activeElement")))
+                (cond
+                  ((and (= key "/")
+                        (not (and (present? active)
+                                  (or (= (field active "tagName") "INPUT")
+                                      (= (field active "tagName") "TEXTAREA")
+                                      (= (field active "tagName") "SELECT")))))
+                    (js-call ev :preventDefault)
+                    (when (present? search-input) (js-call search-input :focus)))
+                  ((and (= key "Escape") (present? search-input) (= active search-input))
+                    (set-field search-input "value" "")
+                    (set-field state "query" "")
+                    (js-call search-input :blur)
+                    (render-directory catalog state))))))))))
+
+  (if (= (field page "readyState") "loading")
+      (js-call page :addEventListener "DOMContentLoaded" (lambda (ev) (start)))
+    (start)))
